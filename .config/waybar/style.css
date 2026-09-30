@@ -1,0 +1,92 @@
+* {
+    font-family: "JetBrainsMono Nerd Font Mono", monospace;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+#waybar {
+    background: #292929;
+    color: #F2F2F2;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+/* ── Left ───────────────────────────────────────────────── */
+
+#workspaces {
+    margin: 0 4px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #A0A0A0;
+    background: transparent;
+    transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+    color: #585858;
+    background: transparent;
+}
+
+#workspaces button:hover {
+    color: #F2F2F2;
+    background: transparent;
+    box-shadow: none;
+}
+
+#window {
+    color: #A0A0A0;
+    margin: 0 4px;
+    font-weight: normal;
+}
+
+/* ── Center ─────────────────────────────────────────────── */
+
+#clock {
+    color: #F2F2F2;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+/* ── Right ──────────────────────────────────────────────── */
+
+#pulseaudio,
+#network,
+#memory,
+#cpu,
+#battery {
+    color: #A0A0A0;
+    padding: 0 8px;
+    transition: color 0.2s ease;
+}
+
+#pulseaudio:hover,
+#network:hover,
+#memory:hover,
+#cpu:hover,
+#battery:hover {
+    color: #F2F2F2;
+}
+
+#battery.good {
+    color: #7A3030;
+}
+
+#battery.warning {
+    color: #5C4445;
+}
+
+#battery.critical {
+    color: #481E1E;
+}
+
+#cpu {
+    color: #585858;
+}
+
+#memory {
+    color: #A4A4A4;
+}

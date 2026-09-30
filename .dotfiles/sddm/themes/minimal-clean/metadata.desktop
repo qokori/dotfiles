@@ -1,0 +1,9 @@
+[SddmGreeterTheme]
+Name=minimal-clean
+Description=Minimal clean SDDM theme with blur, clock and avatar
+Author=neorcage
+Version=1.0
+License=MIT
+MainScript=Main.qml
+ConfigFile=theme.conf
+Screenshot=preview.png

@@ -1,0 +1,7 @@
+#!/bin/bash
+GIF="$HOME/Pictures/Gifs/arch-i-use-arch-btw.gif"
+
+# Create a bottom pane that loops the GIF forever
+kitty @ launch --location hsplit --keep-focus bash -c "while true; do chafa --format kitty --animate on --duration 10 --size 80x10 '$GIF'; done"
+
+fastfetch --logo none

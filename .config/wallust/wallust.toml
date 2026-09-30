@@ -1,0 +1,15 @@
+backend = "fast-resize"
+color_space = "lab"
+palette = "dark16"
+
+[templates.waybar]
+src = "/home/neorcage/.config/wallust/templates/waybar.css"
+dst = "/home/neorcage/.config/waybar/style.css"
+
+[templates.hyprland]
+src = "/home/neorcage/.config/wallust/templates/hyprland.conf"
+dst = "/home/neorcage/.config/hypr/appearance.conf"
+
+[templates.rofi]
+src = "/home/neorcage/.config/wallust/templates/rofi.rasi"
+dst = "/home/neorcage/.config/rofi/colors.rasi"

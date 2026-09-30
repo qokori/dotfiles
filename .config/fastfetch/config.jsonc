@@ -1,0 +1,44 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "logo": {
+    "type": "kitty",
+    "source": "/home/neorcage/Pictures/Gifs/linux-tux.gif",
+    "width": 44,
+    "height": 15,
+    "padding": {
+      "top": 0,
+      "left": 0,
+      "right": 2
+    }
+  },
+
+  "display": {
+    "separator": ": ",
+    "color": {
+      "keys": "blue",
+      "title": "#cba6f7"
+    },
+    "key": {
+      "width": 12,
+      "type": "string"
+    }
+  },
+
+  "modules": [
+    "title",
+    "separator",
+    { "type": "os",       "key": "OS",       "keyColor": "blue", "format": "{name} {version}" },
+    { "type": "kernel",   "key": "Kernel" },
+    { "type": "uptime",   "key": "Uptime" },
+    { "type": "memory",   "key": "Memory",   "percent": { "type": 3, "green": 30, "yellow": 70 } },
+    { "type": "cpu",      "key": "CPU",      "format": "{name} ({cores-physical}C/{cores-logical}T) @ {freq-max}" },
+    { "type": "gpu",      "key": "GPU" },
+    { "type": "disk",     "key": "Disk",     "format": "{name}: {used}/{size}" },
+    { "type": "shell",    "key": "Shell" },
+    { "type": "terminal", "key": "Term" },
+    { "type": "wm",       "key": "WM" },
+    { "type": "packages", "key": "Packages" },
+    { "type": "battery",  "key": "Battery" }
+  ]
+}

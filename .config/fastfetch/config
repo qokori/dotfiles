@@ -1,0 +1,6 @@
+logo = arch
+logo_color = cba6f7ff
+
+info "OS" os
+info "Kernel" kernel
+info "Uptime" uptime

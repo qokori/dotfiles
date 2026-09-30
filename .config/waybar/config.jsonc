@@ -1,0 +1,79 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "margin-top": 6,
+  "margin-left": 12,
+  "margin-right": 12,
+
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "network", "memory", "cpu", "battery"],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "all-outputs": false,
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "active": "",
+      "default": ""
+    }
+  },
+
+  "hyprland/window": {
+    "separate-outputs": true,
+    "format": " {title}",
+    "max-length": 40
+  },
+
+  "clock": {
+    "format": " {:%H:%M}",
+    "format-alt": " {:%A, %d %B %Y}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "states": {
+      "critical": 15,
+      "warning": 40,
+      "good": 70
+    }
+  },
+
+  "cpu": {
+    "format": "  {usage}%",
+    "interval": 2
+  },
+
+  "memory": {
+    "format": "  {used:0.1f}G",
+    "interval": 5
+  },
+
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "  {ifname}",
+    "format-disconnected": "󰤭  offline",
+    "tooltip-format": "{ifname}: {ipaddr}\n {bandwidthUpBytes}  {bandwidthDownBytes}",
+    "on-click": "kitty -e nmtui"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 muted",
+    "format-icons": {
+      "default": [" ", " ", " "]
+    },
+    "on-click": "pavucontrol"
+  }
+}
